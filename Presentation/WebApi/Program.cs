@@ -1,10 +1,14 @@
 using Application.Features.CORS.Handlers.AboutHandlers;
+using Application.Interfaces;
 using Persistence.Context;
+using Persistence.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<CarBookContext>();
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();

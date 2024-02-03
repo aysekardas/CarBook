@@ -1,4 +1,4 @@
-﻿using Application.Features.CORS.Commands.AboutComands;
+﻿using Application.Features.CORS.Commands.BannerCommands;
 using Application.Interfaces;
 using Domain.Entities;
 using System;
@@ -18,7 +18,7 @@ namespace Application.Features.CORS.Handlers.BannerHandlers
             _repository = repository;
         }
 
-        public async Task Handle(RemoveAboutCommand command)
+        public async Task Handle(RemoveBannerCommand command)
         {
             var value = await _repository.GetByIdAsync(command.Id);
             await _repository.RemoveAsync(value);

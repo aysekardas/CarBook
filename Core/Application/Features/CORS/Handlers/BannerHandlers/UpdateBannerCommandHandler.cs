@@ -25,7 +25,7 @@ namespace Application.Features.CORS.Handlers.BannerHandlers
             values.Title = command.Title;
             values.VideoUrl = command.VideoUrl;
             values.VideoDescription = command.VideoDescription;
-            await _repository.UpdateAsync(values);  
+            await _repository.UpdateAsync(values);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.CORS.Commands.AboutComands
+namespace Application.Features.CORS.Commands.AboutCommands
 {
     public class UpdateAboutCommand
     {

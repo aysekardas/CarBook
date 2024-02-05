@@ -1,4 +1,4 @@
-﻿using Application.Features.CORS.Commands.AboutComands;
+﻿using Application.Features.CORS.Commands.AboutCommands;
 using Application.Features.CORS.Commands.BannerCommands;
 using Application.Interfaces;
 using Domain.Entities;

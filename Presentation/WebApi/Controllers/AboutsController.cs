@@ -1,4 +1,4 @@
-﻿using Application.Features.CORS.Commands.AboutComands;
+﻿using Application.Features.CORS.Commands.AboutCommands;
 using Application.Features.CORS.Handlers.AboutHandlers;
 using Application.Features.CORS.Queries.AboutQueries;
 using Microsoft.AspNetCore.Http;

@@ -24,7 +24,7 @@ namespace Application.Features.CORS.Results.CarResults
 
         public byte Luggage { get; set; }
 
-        public byte Fuel { get; set; }
+        public string Fuel { get; set; }
 
         public string BigImageUrl { get; set; }
     }

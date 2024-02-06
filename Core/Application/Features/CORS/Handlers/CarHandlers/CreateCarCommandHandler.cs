@@ -28,7 +28,7 @@ namespace Application.Features.CORS.Handlers.CarHandlers
                Luggage = command.Luggage,
                CoverImageUrl = command.CoverImageUrl,
                Km = command.Km,
-               Fuel = command.Fuel,
+                 Fuel = command.Fuel,
                BigImageUrl = command.BigImageUrl,
                BrandID = command.BrandID
 

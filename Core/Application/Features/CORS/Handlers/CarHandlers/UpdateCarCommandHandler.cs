@@ -22,7 +22,6 @@ namespace Application.Features.CORS.Handlers.CarHandlers
         {
             var values = await _repository.GetByIdAsync(command.CarID);
             values.BrandID = command.BrandID;
-            values.Fuel = command.Fuel;
             values.Transmission = command.Transmission;
             values.BigImageUrl = command.BigImageUrl;
             values.CoverImageUrl= command.CoverImageUrl;
@@ -31,6 +30,7 @@ namespace Application.Features.CORS.Handlers.CarHandlers
             values.Luggage = command.Luggage;
             values.Model = command.Model;
             values.CarID = command.CarID;
+            values.Fuel = command.Fuel;
             await _repository.UpdateAsync(values);
         }
     }

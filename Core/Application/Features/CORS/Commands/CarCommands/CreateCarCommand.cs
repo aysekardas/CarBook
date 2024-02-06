@@ -23,7 +23,7 @@ namespace Application.Features.CORS.Commands.CarCommands
 
         public byte Luggage { get; set; }
 
-        public byte Fuel { get; set; }
+        public string Fuel { get; set; }
 
         public string BigImageUrl { get; set; }
     }

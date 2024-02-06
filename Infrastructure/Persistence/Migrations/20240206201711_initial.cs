@@ -199,7 +199,7 @@ namespace Persistence.Migrations
                     Transmission = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Seat = table.Column<byte>(type: "tinyint", nullable: false),
                     Luggage = table.Column<byte>(type: "tinyint", nullable: false),
-                    Fuel = table.Column<byte>(type: "tinyint", nullable: false),
+                    Fuel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BigImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>

@@ -12,7 +12,7 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(CarBookContext))]
-    [Migration("20240119000303_initial")]
+    [Migration("20240206201711_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -115,8 +115,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("Fuel")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("Fuel")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Km")
                         .HasColumnType("int");

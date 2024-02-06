@@ -112,8 +112,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("Fuel")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("Fuel")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Km")
                         .HasColumnType("int");

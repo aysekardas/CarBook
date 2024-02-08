@@ -2,6 +2,7 @@ using Application.Features.CORS.Handlers.AboutHandlers;
 using Application.Features.CORS.Handlers.BannerHandlers;
 using Application.Features.CORS.Handlers.BrandHandlers;
 using Application.Features.CORS.Handlers.CarHandlers;
+using Application.Features.CORS.Handlers.CategoryHandlers;
 using Application.Interfaces;
 using Application.Interfaces.CarInterfaces;
 using Persistence.Context;
@@ -44,6 +45,13 @@ builder.Services.AddScoped<CreateCarCommandHandler>();
 builder.Services.AddScoped<UpdateCarCommandHandler>();
 builder.Services.AddScoped<RemoveCarCommandHandler>();
 builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
+
+
+builder.Services.AddScoped<GetCategoryQueryHandler>();
+builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+builder.Services.AddScoped<RemoveCategoryCommandHandler>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Mediator.Results
+namespace Application.Features.Mediator.Results.FeatureResults
 {
-    public class GetFeatureQueryResult
+    public class GetFeatureByIdQueryResult
     {
         public int FeatureID { get; set; }
-        public string FeatureName { get; set; }
+        public string Name { get; set; }
     }
 }

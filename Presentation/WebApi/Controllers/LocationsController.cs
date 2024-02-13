@@ -30,7 +30,7 @@ namespace WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetLocation(int id)
         {
-            var value = await _mediator.Send(new GetFeatureByIdQuery(id));
+            var value = await _mediator.Send(new GetLocationByIdQuery(id));
             return Ok(value);
         }
 
@@ -48,7 +48,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> RemoveLocation(int id)
         {
             await _mediator.Send(new RemoveLocationCommand(id));
-            return Ok("Lokasyon başarıyla silindi");
+            return Ok("Lokasyon bilgisi silindi");
         }
 
         [HttpPut]
@@ -56,7 +56,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> UpdateLocation(UpdateLocationCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Lokasyon başarıyla güncellendi");
+            return Ok("Lokasyon bilgisi güncellendi");
         }
     }
 }

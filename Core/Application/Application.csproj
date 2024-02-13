@@ -16,4 +16,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Mediator\Commands\LocationCommands\" />
+    <Folder Include="Features\Mediator\Handlers\LocationHandlers\" />
+    <Folder Include="Features\Mediator\Queries\LocationQueries\" />
+  </ItemGroup>
+
 </Project>

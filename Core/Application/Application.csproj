@@ -17,9 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Mediator\Commands\LocationCommands\" />
     <Folder Include="Features\Mediator\Handlers\LocationHandlers\" />
-    <Folder Include="Features\Mediator\Queries\LocationQueries\" />
   </ItemGroup>
 
 </Project>

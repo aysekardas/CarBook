@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dto.AboutDtos;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace WebUI.ViewComponents.AboutViewComponents
@@ -19,9 +20,13 @@ namespace WebUI.ViewComponents.AboutViewComponents
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultAboutDto>>(jsonData);
+                return View(values);
+
+                #region Serialize-Deserialize
                 //DeserializeObject : Api türünde gelen veriyi text türünde viewde göstermek istediğimiz için
-                //SerializeObject : Inputlara girdiğimiz veriyi apiye göndermek istersek bir ekleme veya güncelleme işlemi yapmak istersek 
+                //SerializeObject : Inputlara girdiğimiz veriyi apiye göndermek istersek bir ekleme veya güncelleme işlemi yapmak istersek
+                #endregion
             }
             return View();
         }

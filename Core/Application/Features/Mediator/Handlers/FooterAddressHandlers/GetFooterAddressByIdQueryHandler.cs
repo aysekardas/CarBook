@@ -13,9 +13,9 @@ namespace Application.Features.Mediator.Handlers.FooterAddressHandlers
 {
     public class GetFooterAddressByIdQueryHandler : IRequestHandler<GetFooterAddressByIdQuery, GetFooterAddressByIdQueryResult>
     {
-        private readonly IRepository<FooterAdress> _repository;
+        private readonly IRepository<FooterAddress> _repository;
 
-        public GetFooterAddressByIdQueryHandler(IRepository<FooterAdress> repository)
+        public GetFooterAddressByIdQueryHandler(IRepository<FooterAddress> repository)
         {
             _repository = repository;
         }
@@ -25,10 +25,10 @@ namespace Application.Features.Mediator.Handlers.FooterAddressHandlers
             var value =await _repository.GetByIdAsync(request.Id);
             return new GetFooterAddressByIdQueryResult
             {
-                Adress = value.Adress,
+				Address = value.Address,
                 Description = value.Description,
                 Email = value.Email,
-                FooterAdressID = value.FooterAdressID,
+				FooterAddressID = value.FooterAddressID,
                 Phone = value.Phone
             };
         }

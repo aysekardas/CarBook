@@ -12,9 +12,9 @@ namespace Application.Features.Mediator.Handlers.FooterAddressHandlers
 {
     public class RemoveFooterAddressCommandHandler : IRequestHandler<RemoveFooterAddressCommand>
     {
-        private readonly IRepository<FooterAdress> _repository;
+        private readonly IRepository<FooterAddress> _repository;
 
-        public RemoveFooterAddressCommandHandler(IRepository<FooterAdress> repository)
+        public RemoveFooterAddressCommandHandler(IRepository<FooterAddress> repository)
         {
             _repository = repository;
         }

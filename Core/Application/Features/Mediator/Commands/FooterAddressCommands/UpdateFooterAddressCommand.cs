@@ -9,9 +9,9 @@ namespace Application.Features.Mediator.Commands.FooterAddressCommands
 {
     public class UpdateFooterAddressCommand :IRequest
     {
-        public int FooterAdressID { get; set; }
+        public int FooterAddressID { get; set; }
         public string Description { get; set; }
-        public string Adress { get; set; }
+        public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
     }

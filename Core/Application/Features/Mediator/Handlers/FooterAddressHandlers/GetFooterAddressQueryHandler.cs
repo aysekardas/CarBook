@@ -13,9 +13,9 @@ namespace Application.Features.Mediator.Handlers.FooterAddressHandlers
 {
     public class GetFooterAddressQueryHandler : IRequestHandler<GetFooterAddressQuery, List<GetFooterAddressQueryResult>>
     {
-        private readonly IRepository<FooterAdress> _repository;
+        private readonly IRepository<FooterAddress> _repository;
 
-        public GetFooterAddressQueryHandler(IRepository<FooterAdress> repository)
+        public GetFooterAddressQueryHandler(IRepository<FooterAddress> repository)
         {
             _repository = repository;
         }
@@ -25,10 +25,10 @@ namespace Application.Features.Mediator.Handlers.FooterAddressHandlers
             var values = await _repository.GetAllAsync();
             return values.Select(x => new GetFooterAddressQueryResult
             {
-                Adress = x.Adress,
+                Address = x.Address,
                 Description = x.Description,
                 Email = x.Email,
-                FooterAdressID = x.FooterAdressID,
+                FooterAddressID = x.FooterAddressID,
                 Phone = x.Phone
             }).ToList();
         }

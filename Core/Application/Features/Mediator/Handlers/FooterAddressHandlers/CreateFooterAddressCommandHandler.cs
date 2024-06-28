@@ -12,18 +12,18 @@ namespace Application.Features.Mediator.Handlers.FooterAddressHandlers
 {
     public class CreateFooterAddressCommandHandler : IRequestHandler<CreateFooterAddressCommand>
     {
-        private readonly IRepository<FooterAdress> _repository;
+        private readonly IRepository<FooterAddress> _repository;
 
-        public CreateFooterAddressCommandHandler(IRepository<FooterAdress> repository)
+        public CreateFooterAddressCommandHandler(IRepository<FooterAddress> repository)
         {
             _repository = repository;
         }
 
         public async Task Handle(CreateFooterAddressCommand request, CancellationToken cancellationToken)
         {
-            await _repository.CreateAsync(new FooterAdress
+            await _repository.CreateAsync(new FooterAddress
             {
-                Adress = request.Adress,
+                Address = request.Address,
                 Description = request.Description,
                 Email = request.Email,
                 Phone = request.Phone

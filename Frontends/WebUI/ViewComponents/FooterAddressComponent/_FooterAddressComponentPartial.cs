@@ -16,7 +16,7 @@ namespace WebUI.ViewComponents.FooterAddressComponent
 		public async Task<IViewComponentResult> InvokeAsync()
 		{
 			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("https://localhost:7279/api/FooterAddresses");
+			var responseMessage = await client.GetAsync("'https://localhost:7279/api/FooterAdresses");
 			if (responseMessage.IsSuccessStatusCode) 
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();

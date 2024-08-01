@@ -17,8 +17,8 @@ namespace WebApi.Controllers
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarsWithBrandQueryHandler _getLast5CarsWithBrandQueryHandler;
-        private readonly GetCarWithPricingQueryHandler _getCarWithPricingQueryHandler;
-		public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarQueryHandler getCarQueryHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getLast5CarsWithBrandQueryHandler, GetCarWithPricingQueryHandler getCarWithPricingQueryHandler)
+    
+		public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarQueryHandler getCarQueryHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler getLast5CarsWithBrandQueryHandler)
 		{
 			_createCarCommandHandler = createCarCommandHandler;
 			_getCarQueryHandler = getCarQueryHandler;
@@ -27,7 +27,7 @@ namespace WebApi.Controllers
 			_removeCarCommandHandler = removeCarCommandHandler;
 			_getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
 			_getLast5CarsWithBrandQueryHandler = getLast5CarsWithBrandQueryHandler;
-			_getCarWithPricingQueryHandler = getCarWithPricingQueryHandler;
+			
 		}
 
 
@@ -86,13 +86,7 @@ namespace WebApi.Controllers
             return Ok(values);
         }
 
-        [HttpGet("GetCarWithPricingList")]
 
-        public IActionResult GetCarWithPricingList()
-        {
-            var values = _getCarWithPricingQueryHandler.Handle();
-            return Ok(values);
-        }
 
 	}
 }

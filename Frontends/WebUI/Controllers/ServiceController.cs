@@ -8,7 +8,8 @@ namespace WebUI.Controllers
     {
         public IActionResult Index()
         {
-           
+            ViewBag.v1 = "Hizmetler";  
+            ViewBag.v2 = "Hizmetlerimiz";  
             return View();
         }
     }

@@ -31,7 +31,8 @@ namespace Application.Features.Mediator.Handlers.BlogHandlers
 				CategoryName = x.Category.Name,
 				CoverImageUrl = x.CoverImageUrl,
 				CreatedDate = x.CreatedDate,
-				Title = x.Title
+				Title = x.Title,
+				Description = x.Description
 
 			}).ToList();
 			

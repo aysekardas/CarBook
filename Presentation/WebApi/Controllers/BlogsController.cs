@@ -1,5 +1,6 @@
 ﻿using Application.Features.Mediator.Commands.BlogCommands;
 using Application.Features.Mediator.Queries.BlogQueries;
+using Application.Features.Mediator.Results.BlogResults;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -63,6 +64,14 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetLast3BlogsWithAuthorsList()
         {
             var values = await _mediator.Send(new GetLast3BlogsWithAuthorsQuery());
+            return Ok(values);
+        } 
+        
+        [HttpGet("GetAllBlogsWithAuthorList")]
+
+        public async Task<IActionResult> GetAllBlogsWithAuthorList()
+        {
+            var values = await _mediator.Send(new GetAllBlogsWithAuthorQuery());
             return Ok(values);
         }
 

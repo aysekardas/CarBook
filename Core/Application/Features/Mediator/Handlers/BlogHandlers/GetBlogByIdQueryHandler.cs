@@ -32,6 +32,7 @@ namespace Application.Features.Mediator.Handlers.BlogHandlers
                 CategoryID = values.CategoryID,
                 Title = values.Title,
                 CoverImageUrl = values.CoverImageUrl,
+                Description = values.Description,
                 CreatedDate = values.CreatedDate
              
             };

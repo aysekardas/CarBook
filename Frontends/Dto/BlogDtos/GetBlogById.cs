@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Mediator.Results.BlogResults
+namespace Dto.BlogDtos
 {
-    public class GetBlogByIdQueryResult
+    public class GetBlogById
     {
         public int BlogID { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
         public int AuthorID { get; set; }
         public string CoverImageUrl { get; set; }
         public DateTime CreatedDate { get; set; }
         public int CategoryID { get; set; }
+        public string Description { get; set; }
     }
 }

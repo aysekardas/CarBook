@@ -1,4 +1,5 @@
 ﻿using Dto.BlogDtos;
+using Dto.TagCloudDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -15,12 +16,13 @@ namespace WebUI.ViewComponents.BlogViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
+            ViewBag.blogId = id;
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7279/api/TagClouds/" + id);
+            var responseMessage = await client.GetAsync($"https://localhost:7279/api/TagClouds/GetTagCloudByBlogId/" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<>(jsonData);
+                var values = JsonConvert.DeserializeObject<GetByBlogIdTagCloudDto>(jsonData);
                 return View(values);
 
             }

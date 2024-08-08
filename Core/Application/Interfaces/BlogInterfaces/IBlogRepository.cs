@@ -11,5 +11,6 @@ namespace Application.Interfaces.BlogInterfaces
     {
         public List<Blog> GetLast3BlogsWithAuthors();
         public List<Blog> GetAllBlogsWithAuthors();
+        public List<Blog> GetBlogByAuthorId(int id);
     }
 }
